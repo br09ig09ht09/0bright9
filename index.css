@@ -1,0 +1,143 @@
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(23, 4, 229) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgb(222, 222, 222) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    color: white;
+    font-size:23px ;
+    }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+li{color: #cd1ca4;
+margin: 30px;
+font-weight: bold;
+
+}
+figure{
+        margin: 20px auto;
+        text-align: center;
+     }
+     figcaption{
+        color:#999
+     }
+
+h1{
+    
+    
+color:#d82256;/*titre de premier niveau bleu marine*/
+text-align:center;/*centré*/
+text-transform: capitalize;
+
+
+}
+.scrolling-text{
+    width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.scrolling-text h1{
+    animation: scroll 07s linear infinite;
+}
+@keyframes scroll{
+    from{
+        transform: translate(100%);/*depart du texte a gauche vers la droite*/
+    }
+}
+to{
+    transform: translateX(-100%);/*fin du texte a gauche de la zone*/
+}
+
+
+h2{
+color:#e7e128;/*titre de deuxieme niveau rouge*/
+margin-left:15px;/*decalé de 15 pixels*/
+text-align:center;/*centré*/
+text-decoration: underline;
+
+
+ border-radius:6; 
+}
+a{
+color:#ed6916;/*liens verts par defaut8*/
+text-decoration: none;/*effet non souligné par defaut*/
+text-align: left;
+}
+
+a:hover{
+color:#808080;/*lien gris au survol */
+}
+P{
+    margin-top: 20px;
+}
+h3{
+    text-align:center;/*centré*/
+    text-decoration: underline;
+    color:#416b49;
+}
